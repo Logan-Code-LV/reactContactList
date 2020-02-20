@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import data from "./randomUsers.json"
+import { FaUserAlt } from "react-icons/fa"
+import { MdEmail, MdPhoneIphone } from "react-icons/md"
+import { GoGlobe } from "react-icons/go"
 
 export default function(props) {
   const id = props.match.params.id
@@ -15,15 +18,19 @@ export default function(props) {
       <h1 className="singleheader">Single View</h1>
       <div className="singleimgbc">
         <img className="singlepic" src={person.picture.large} />
-      </div>
-      <ul>
-        <li>{person.name.first}</li>
-        <li>{person.email}</li>
-        <li>{person.phone}</li>
-        <li>
-          {person.location.city},{person.location.state}
-        </li>
-      </ul>
+      </div>{" "}
+      <p>
+        <FaUserAlt /> -{person.name.first}
+      </p>{" "}
+      <p>
+        <MdEmail /> -{person.email}
+      </p>{" "}
+      <p>
+        <MdPhoneIphone /> -{person.phone}
+      </p>{" "}
+      <p>
+        <GoGlobe /> -{person.location.city},{person.location.state}
+      </p>{" "}
     </div>
   )
 }

@@ -4,7 +4,7 @@ import data from "./randomUsers.json"
 
 export default function(props) {
   return (
-    <div className="singleview">
+    <div className="listview">
       <h1 className="listheader">List View</h1>
       <h1 className="peeps">My Peeps</h1>
       {data.map(person => (
