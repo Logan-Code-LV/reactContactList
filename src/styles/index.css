@@ -13,12 +13,12 @@ code {
 }
 
 .container {
-  width: 1200px;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .listview {
   width: 800px;
-  margin: 0 auto;
 }
 
 .singleview {
@@ -40,6 +40,11 @@ code {
 .singleimgbc {
   background-color: rgb(160, 201, 111);
   padding: 20px;
+}
+
+button {
+  height: 50px;
+  width: 50px;
 }
 
 p {
